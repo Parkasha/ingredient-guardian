@@ -272,7 +272,7 @@ Analyze each ingredient for health risks, safety, allergens, and suitability. Re
               <p style={{ color: 'var(--text-muted)', fontSize: '13px', marginTop: '4px' }}>Photo of ingredient label or full product</p>
             </div>
           )}
-          <input ref={fileRef} type="file" accept="image/*" capture="environment" style={{ display: 'none' }} onChange={e => handleFile(e.target.files[0])} />
+          <input ref={fileRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={e => handleFile(e.target.files[0])} />
         </div>
       )}
 
