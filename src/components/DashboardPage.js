@@ -157,14 +157,4 @@ export default function DashboardPage({ history, onNavigate }) {
       </div>
     </div>
   );
-
-  function formatTime(iso) {
-    const d = new Date(iso);
-    const now = new Date();
-    const diff = (now - d) / 1000;
-    if (diff < 60) return 'Just now';
-    if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
-    if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
-    return d.toLocaleDateString();
-  }
 }
