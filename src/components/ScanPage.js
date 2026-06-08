@@ -150,7 +150,7 @@ Analyze each ingredient for health risks, safety, allergens, and suitability. Re
       const data = await res.json();
       clearInterval(stepInterval);
 
-      if (!res.ok) throw new Error(data.error?.message || 'API error');
+      if (!res.ok) throw new Error(data.error || data.error?.message || 'API error');
 
       const raw = data.content?.[0]?.text || '';
       const cleaned = raw.replace(/```json|```/g, '').trim();
